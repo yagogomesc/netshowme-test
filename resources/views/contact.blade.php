@@ -12,6 +12,15 @@
     <body>
         <div class="container">
             <div class="page-contact col-sm-8 offset-sm-2">
+                @if ($errors->any())
+                    <div class="alert alert-danger">   
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="card mt-5">
                     <div class="card-header">
                         <h3>
@@ -31,7 +40,7 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Telefone</label>
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Telefone">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="(xx) xxxx-xxxx">
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
@@ -49,7 +58,8 @@
                 </div>
             </div>
         </div>
-
-    <script src="{{ asset('js/app.js')}}"></script>
+        
+        <script src="{{ asset('js/app.js')}}"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     </body>
 </html>
