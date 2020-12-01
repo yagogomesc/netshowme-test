@@ -22,7 +22,7 @@
                     <form enctype="multipart/form-data" action="{{route('contact.store')}}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="name">Nome:</label>
+                            <label for="name">Nome</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Nome">
                         </div>
                         <div class="form-group">
