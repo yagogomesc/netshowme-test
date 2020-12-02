@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ContactController@create');
+Route::get('/', 'ContactController@create')->name('contact.create');
 
 Route::post('/', 'ContactController@store')->name('contact.store');
