@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Requests;
+use App\Http\Requests\StoreContact;
 
 class ContactController extends Controller
 {
@@ -19,11 +20,11 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\StoreContact  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreContact $request)
     {
-        //
+        $teste = $request->validated();
     }
 }
