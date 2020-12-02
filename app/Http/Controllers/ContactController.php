@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Requests;
-use App\Http\Requests\StoreContact;
 use App\Contact;
+use App\Http\Requests\StoreContact;
+
+use Illuminate\Http\Requests;
+use Illuminate\Support\Facades\Storage;
 
 class ContactController extends Controller
 {
