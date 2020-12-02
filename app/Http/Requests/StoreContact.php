@@ -28,7 +28,7 @@ class StoreContact extends FormRequest
             'email' => 'required|email',
             'phone' => 'required|min:10|regex:/^\(\d{2}\)\s?\d{4,5}-\d{4}$/',
             'message' => 'required',
-            'archive' => 'required|file|max:500|mime:pdf,doc,docx,odt,txt',
+            'archive' => 'required|file|max:500|mimetypes:application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.text,text/plain',
         ];
     }
 
@@ -49,7 +49,7 @@ class StoreContact extends FormRequest
             'message.required' => 'Preencha o campo mensagem',
             'archive.required' => 'Envie um arquivo',
             'archive.max' => 'Envie um arquivo com menos de 500kb',
-            'archive.mime' => 'Envie um arquivo do tipo correto: pdf, doc, docx, odt ou txt'
+            'archive.mimetypes' => 'Envie um arquivo do tipo correto: pdf, doc, docx, odt ou txt'
         ];
     }
 }
