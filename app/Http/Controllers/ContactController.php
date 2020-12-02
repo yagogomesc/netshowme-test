@@ -30,6 +30,10 @@ class ContactController extends Controller
     {
         $teste = $request->validated();
 
+        $upload = $request->archive->storeAs('contacts/archives', $request->archive->getClientOriginalName());
+
+        $localArchive = Storage::url($request->archive->getClientOriginalName());
+
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->email = $request->email;
