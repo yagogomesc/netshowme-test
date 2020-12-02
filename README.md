@@ -13,4 +13,4 @@ Utilizando um banco de dados MySQL(MariaDB)
 
 - Necessário criar um banco de dados com o nome "netshowmetest".
 
-- Na pasta base, utilizar o comando "php artisan migrate" (No linux pode ser necessário rodar o comando com sudo).
+- Na pasta base, utilizar o comando "php artisan migrate" para criar tabela utilizada pela aplicação (No linux pode ser necessário rodar o comando com sudo).
