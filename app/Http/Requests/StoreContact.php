@@ -45,7 +45,11 @@ class StoreContact extends FormRequest
             'email.email' => 'Insira um e-mail válido',
             'phone.required' => 'Preencha o campo telefone',
             'phone.min' => 'Insira um telefone válido',
-            'phone.regex' => 'Insira um telefone no padrão correto'
+            'phone.regex' => 'Insira um telefone no padrão correto',
+            'message.required' => 'Preencha o campo mensagem',
+            'archive.required' => 'Envie um arquivo',
+            'archive.max' => 'Envie um arquivo com menos de 500kb',
+            'archive.mime' => 'Envie um arquivo do tipo correto: pdf, doc, docx, odt ou txt'
         ];
     }
 }
