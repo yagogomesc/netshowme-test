@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Requests;
 use App\Http\Requests\StoreContact;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -26,5 +27,16 @@ class ContactController extends Controller
     public function store(StoreContact $request)
     {
         $teste = $request->validated();
+
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->message = $request->message;
+        $contact->archive = 'Aaaaaaa';
+        $contact->ip_address = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];;
+        $contact->save();
+
+        return redirect()->route('contact.create')->with('success', 'Contato registrado com sucesso');
     }
 }
