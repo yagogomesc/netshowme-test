@@ -9,4 +9,8 @@
 
 - Acessar a pasta "resources" e utilizar o comando "npm install" e depois "npm run dev".
 
+Utilizando um banco de dados MySQL(MariaDB)
+
 - Necessário criar um banco de dados com o nome "netshowmetest".
+
+- Na pasta base, utilizar o comando "php artisan migrate".
