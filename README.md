@@ -7,4 +7,6 @@
 
 - Utilizar na pasta base o comando "php artisan key:generate".
 
-- Acessar a pasta "resources" e utilizar o comando "npm install" e depois "npm run dev"
+- Acessar a pasta "resources" e utilizar o comando "npm install" e depois "npm run dev".
+
+- Necessário criar um banco de dados com o nome "netshowmetest".
