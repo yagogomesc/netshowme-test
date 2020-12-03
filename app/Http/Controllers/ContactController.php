@@ -28,18 +28,16 @@ class ContactController extends Controller
      */
     public function store(StoreContact $request)
     {
-        $teste = $request->validated();
-
-        $upload = $request->archive->storeAs('contacts/archives', $request->archive->getClientOriginalName());
-
-        $localArchive = Storage::url($request->archive->getClientOriginalName());
+        $validated = $request->validated();
+        
+        $uploadPath = $request->archive->storeAs('contacts/archives', $request->archive->getClientOriginalName());
 
         $contact = new Contact();
-        $contact->name = $request->name;
-        $contact->email = $request->email;
-        $contact->phone = $request->phone;
-        $contact->message = $request->message;
-        $contact->archive = 'Aaaaaaa';
+        $contact->name = $validated['name'];
+        $contact->email = $validated['email'];
+        $contact->phone = $validated['phone'];
+        $contact->message = $validated['message'];
+        $contact->archive = $uploadPath;
         $contact->ip_address = $this->getUserIpAddress();
         $contact->save();
 
