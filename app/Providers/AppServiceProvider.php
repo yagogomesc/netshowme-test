@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Contact;
+use App\Observers\ContactObserver;
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Contact::observe(ContactObserver::class);
     }
 }
