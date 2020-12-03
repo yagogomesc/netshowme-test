@@ -40,9 +40,15 @@ class ContactController extends Controller
         $contact->phone = $request->phone;
         $contact->message = $request->message;
         $contact->archive = 'Aaaaaaa';
-        $contact->ip_address = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];;
+        $contact->ip_address = $this->getUserIpAddress();
         $contact->save();
 
         return redirect()->route('contact.create')->with('success', 'Contato registrado com sucesso');
+    }
+
+    function getUserIpAddress(){
+        $ip = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);
+
+        return $ip;
     }
 }
