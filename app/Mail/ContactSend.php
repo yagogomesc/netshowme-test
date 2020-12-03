@@ -32,7 +32,14 @@ class ContactSend extends Mailable
      */
     public function build()
     {
-        return $this->subject('Contato')
-                    ->view('mail.contactSend');
+        return $this->subject('Contato Netshow.me')
+                    ->view('mail.contactSend')
+                    ->with([
+                        'name' => $this->contact->name,
+                        'email' => $this->contact->email,
+                        'phone' => $this->contact->phone,
+                        'bodyMessage' => $this->contact->message,
+                        'archive' => $this->contact->archive,
+                    ]);
     }
 }
