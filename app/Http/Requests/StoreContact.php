@@ -26,7 +26,7 @@ class StoreContact extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required|min:10|regex:/^\(\d{2}\)\s?\d{4,5}-\d{4}$/',
+            'phone' => 'required|min:14|regex:/^\(\d{2}\)\s?\d{4,5}-\d{4}$/',
             'message' => 'required',
             'archive' => 'required|file|max:500|mimetypes:application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.text,text/plain',
         ];
