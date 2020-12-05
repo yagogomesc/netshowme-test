@@ -1,6 +1,6 @@
 <h3>Teste Netshow.me</h3>
 
-A página foi criada utilizando PHP, Laravel, Bootstrap, JQuery e SASS
+A página foi criada utilizando PHP, Laravel, Bootstrap , JQuery e SASS
 
 - Após clonar o repositório é necessário primeiramente rodar o comando "composer install" no diretório base (No linux pode ser necessário rodar o comando com sudo).
 
