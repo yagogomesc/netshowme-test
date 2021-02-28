@@ -20,4 +20,7 @@ Utilizando um banco de dados MySQL(MariaDB)
 
 Testes com PHPUnit se encontram na pasta "tests/Feature"
 
-- Para rodar os testes escritos, é só utilizar "php artisan test" na pasta base
+- Para rodar os testes escritos utilize
+<pre>
+php artisan test
+</pre>
