@@ -2,25 +2,38 @@
 
 A página foi criada utilizando PHP, Laravel, Bootstrap , JQuery e SASS
 
-- Após clonar o repositório é necessário primeiramente rodar o comando "composer install" no diretório base (No linux pode ser necessário rodar o comando com sudo).
+<pre>
+# Clone o repositório
+git clone https://github.com/yagogomesc/netshowme-test.git
 
-- Criar uma cópia do arquivo ".env.example" e renomea-lo para ".env".
+# Instale as dependencias do composer
+composer install
 
-- Utilizar na pasta base o comando "php artisan key:generate" e "php artisan storage:link" pra criar link simbolico na pasta public para deste modo acessar os arquivos enviados pelo formulario.
+Faça uma cópia do ".env.example" e renomeie para ".env"
 
-- Acessar a pasta "resources" e utilizar dentro dela o comando "npm install" e depois "npm run dev".
+# Gere a chave do laravel e crie o link simbolico para o storage
+php artisan key:generate
+php artisan storage:link
+
+# Na pasta "/resources" utilize o npm para instalar dependencias e compilar os assets do front-end
+npm install
+npm run dev
+</pre>
 
 Utilizando um banco de dados MySQL(MariaDB)
 
 - Necessário criar um banco de dados com o nome "netshowmetest".
 
-- Na pasta base, utilizar o comando "php artisan migrate" para criar tabela utilizada pela aplicação (No linux pode ser necessário rodar o comando com sudo).
+<pre>
+    # Após criar o banco de dados, use na pasta base do projeto
+    php artisan migrate
+</pre>
 
 - Para os dados do formulários serem enviados via e-mail é necessário configurar um servidor smtp e ajustar as variaveis 'MAIL_FROM_ADDRESS' e 'MAIL_TO_ADDRESS' com o email em que se deseja fazer o envio e receber os dados do contato.
 
 Testes com PHPUnit se encontram na pasta "tests/Feature"
 
-- Para rodar os testes escritos utilize
 <pre>
+#Para rodar os testes escritos utilize
 php artisan test
 </pre>
