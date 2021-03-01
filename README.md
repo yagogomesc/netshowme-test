@@ -25,8 +25,8 @@ Utilizando um banco de dados MySQL(MariaDB)
 - Necessário criar um banco de dados com o nome "netshowmetest".
 
 <pre>
-    # Após criar o banco de dados, use na pasta base do projeto
-    php artisan migrate
+# Após criar o banco de dados, use na pasta base do projeto
+php artisan migrate
 </pre>
 
 - Para os dados do formulários serem enviados via e-mail é necessário configurar um servidor smtp e ajustar as variaveis 'MAIL_FROM_ADDRESS' e 'MAIL_TO_ADDRESS' com o email em que se deseja fazer o envio e receber os dados do contato.
